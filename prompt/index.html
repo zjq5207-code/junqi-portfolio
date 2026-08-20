@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="AI 导演曾俊淇的提示词工程系统：剧本拆分 Skill、即梦提示词协议、A/B 机位路由与交付质检。" />
+  <title>提示词工程｜可复用导演系统</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="prompt-system.css" />
+  <link rel="stylesheet" href="../ui-assets/nav-ui.css" />
+</head>
+<body class="prompt-system-page">
+  <div id="portfolio-react-ui" data-context="prompt"></div>
+  <div class="grain"></div>
+
+  <main id="prompt-top">
+    <section class="system-hero">
+      <div class="system-hero__grid" aria-hidden="true"></div>
+      <div class="system-hero__orb system-hero__orb--one" aria-hidden="true"></div>
+      <div class="system-hero__orb system-hero__orb--two" aria-hidden="true"></div>
+      <div class="system-hero__copy reveal">
+        <p class="system-label"><i></i> PROMPT SYSTEM / V3.2</p>
+        <h1>把导演判断<br><span>编码成系统</span></h1>
+        <p>从剧本语义、机位逻辑到模型可执行提示词，<br>让一次经验成为可复用的生产能力。</p>
+        <a href="#system-map">查看系统架构 <b>↓</b></a>
+      </div>
+      <div class="system-hero__status">
+        <span>INPUT / 剧本</span><span>ENGINE / 导演规则</span><span>OUTPUT / 生成指令</span>
+      </div>
+      <div class="system-hero__rail" aria-hidden="true">SCRIPT SPLITTER · CAMERA ROUTER · JIMENG PROTOCOL · QUALITY ASSURANCE ·</div>
+    </section>
+
+    <section id="system-map" class="system-section system-map">
+      <header class="system-section__head reveal">
+        <div><p>00 / SYSTEM MAP</p><h2>一条可复用的<br>导演编译管线</h2></div>
+        <p>不是堆砌修饰词，而是把叙事意图逐层转换为<br>模型能够稳定执行、团队能够复查的明确约束。</p>
+      </header>
+      <div class="pipeline reveal" aria-label="提示词工程处理管线">
+        <article><b>01</b><span>INGEST</span><h3>剧本输入</h3><p>人物、场景、动作、台词与交付限制</p></article>
+        <i>→</i>
+        <article><b>02</b><span>PARSE</span><h3>语义拆分</h3><p>时长核算、叙事节点、连续性与空间关系</p></article>
+        <i>→</i>
+        <article><b>03</b><span>ROUTE</span><h3>机位路由</h3><p>一镜到底 A / 切镜 B，按叙事目标选择</p></article>
+        <i>→</i>
+        <article><b>04</b><span>COMPILE</span><h3>约束编译</h3><p>场景、光影、站位、材质、运镜与声音</p></article>
+        <i>→</i>
+        <article><b>05</b><span>VERIFY</span><h3>交付质检</h3><p>轴线、物理、引用、红线与结尾逐项核验</p></article>
+      </div>
+    </section>
+
+    <section id="splitter" class="system-section splitter">
+      <header class="system-section__head reveal">
+        <div><p>01 / SCRIPT SPLITTER SKILL</p><h2>剧本拆分<br><em>不是机械切段</em></h2></div>
+        <p>先读懂剧情功能，再按时间、动作与镜头逻辑拆解。<br>每段都保留完整的因果链与可执行交付结构。</p>
+      </header>
+
+      <div class="splitter-dashboard reveal">
+        <div class="duration-card">
+          <span>DURATION ENGINE</span>
+          <strong><b>20</b> SEC</strong>
+          <p>单段生成上限</p>
+          <div><i style="--fill:80%"></i></div>
+          <ul>
+            <li><span>中文台词</span><b>≈ 4 字 / 秒</b></li>
+            <li><span>情绪台词</span><b>≈ 3.5 字 / 秒</b></li>
+            <li><span>英文台词</span><b>≈ 3 词 / 秒</b></li>
+            <li><span>机位节点</span><b>2–10 / 段</b></li>
+          </ul>
+        </div>
+        <div class="schema-card">
+          <div class="schema-card__title"><span>OUTPUT SCHEMA</span><b>固定交付协议</b></div>
+          <ol>
+            <li><b>01</b><span>本镜简述</span><small>100–200 字，先说清叙事功能</small></li>
+            <li><b>02</b><span>时长与台词核算</span><small>超时自动拆段</small></li>
+            <li><b>03</b><span>重要备注</span><small>最高优先级红线</small></li>
+            <li><b>04</b><span>人物与素材引用</span><small>资产只在引用区出现</small></li>
+            <li><b>05</b><span>场景 / 光影</span><small>每镜明确建立或延续</small></li>
+            <li><b>06</b><span>姿态 / 站位 / 质感</span><small>空间与物理连续</small></li>
+            <li><b>07</b><span>提示词正文</span><small>按时间码编译镜头执行</small></li>
+            <li><b>08</b><span>交付校验</span><small>每段 ≤ 3000 中文字符</small></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="jimeng" class="system-section protocol">
+      <header class="system-section__head reveal">
+        <div><p>02 / JIMENG PROTOCOL</p><h2>即梦提示词<br>生成规则</h2></div>
+        <p>把提示词分成有优先级的模块。先锁定不可违反的规则，<br>再组织人物、空间、影像与声音，最后写入时间码。</p>
+      </header>
+      <div class="protocol-layout">
+        <div class="rule-stack reveal">
+          <article class="rule-stack__critical"><b>P0</b><div><span>最高优先</span><h3>不可违反的交付红线</h3><p>无 BGM、无画面文字、关系轴锁定、物理真实、结尾方式明确。</p></div></article>
+          <article><b>P1</b><div><span>WORLD</span><h3>人物 + 素材 + 场景</h3><p>明确出场人物、资产引用、空间结构，以及本镜“建立 / 延续”。</p></div></article>
+          <article><b>P2</b><div><span>IMAGE</span><h3>光影 + 站位 + 材质</h3><p>写清主辅光、冷暖、动作位置、受力关系、反假与负向词。</p></div></article>
+          <article><b>P3</b><div><span>CAMERA</span><h3>机位 + 运镜 + 构图</h3><p>以机位单元和时间码描述焦段、角度、运动、切换与构图意图。</p></div></article>
+          <article><b>P4</b><div><span>SOUND</span><h3>音效 + 环境声 + 配音</h3><p>声音跟随动作节点进入；台词只通过配音呈现，不污染画面。</p></div></article>
+        </div>
+        <div class="compiler reveal">
+          <div class="compiler__bar"><i></i><i></i><i></i><span>prompt_compiler.skill</span><b>READY</b></div>
+          <pre aria-label="提示词编译结构示例"><code><span class="code-comment">// 每个镜头的标准输入结构</span>
+<span class="code-key">【重要备注】</span>   P0 / 红线锁定
+<span class="code-key">【出场人物】</span>   角色及状态
+<span class="code-key">【素材引用区】</span> @人物 @场景 @道具
+<span class="code-key">【场景描述】</span>   建立 / 延续
+<span class="code-key">【光影细节】</span>   光源、影调、情绪
+<span class="code-key">【姿态与站位】</span> 动作、轴线、空间
+<span class="code-key">【人物质感】</span>   反假 + 负向词
+
+<span class="code-call">[机位单元 01｜0–8s｜复合运镜]</span>
+  图：动作 + 机位 + 物理结果
+  音效：与动作节点精确同步
+  配音：画外音 / 无口型
+  切换：动作匹配切</code></pre>
+          <div class="compiler__foot"><span>引用只存在于素材区</span><span>正文不出现 @ 标记</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="camera-router" class="system-section camera-router">
+      <header class="system-section__head reveal">
+        <div><p>03 / CAMERA ROUTER</p><h2>先选择镜头逻辑，<br>再生成运镜</h2></div>
+        <p>镜头不是随机修饰词。系统根据连续动作、信息密度与情绪转折，<br>在两种明确的导演策略之间做路由。</p>
+      </header>
+      <div class="router-shell reveal" data-router="a">
+        <div class="router-tabs" role="tablist" aria-label="机位模式选择">
+          <button id="router-a" class="active" role="tab" aria-selected="true" aria-controls="route-a" data-route="a"><b>A</b><span>一镜到底</span><small>PHYSICAL CONTINUITY</small></button>
+          <button id="router-b" role="tab" aria-selected="false" aria-controls="route-b" data-route="b"><b>B</b><span>切镜系统</span><small>INFORMATION RHYTHM</small></button>
+        </div>
+        <div id="route-a" class="route-panel active" role="tabpanel" aria-labelledby="router-a" data-panel="a">
+          <div><span>USE WHEN</span><h3>动作与物理连续性优先</h3><p>同一摄影机身份、同一条物理路径，机位与主体共享惯性框架。景别变化必须来自真实位移，不允许切换、重置或越轴。</p></div>
+          <ol><li><b>01</b><span>单一摄影机身份</span></li><li><b>02</b><span>首尾运镜连续相接</span></li><li><b>03</b><span>景别随距离自然变化</span></li><li><b>04</b><span>动作因果不中断</span></li></ol>
+        </div>
+        <div id="route-b" class="route-panel" role="tabpanel" aria-labelledby="router-b" data-panel="b" hidden>
+          <div><span>USE WHEN</span><h3>信息、对白与情绪转折优先</h3><p>每次切换都是独立机位单元，必须标注时间码、机位高低、角度、景别、运动方式与转场逻辑。固定镜头与运动镜头约 2:1。</p></div>
+          <ol><li><b>01</b><span>每个切点独立定义</span></li><li><b>02</b><span>对白使用正反打 / 过肩</span></li><li><b>03</b><span>动作匹配保持连续</span></li><li><b>04</b><span>关系轴始终同侧</span></li></ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="reference-library" class="system-section library">
+      <header class="system-section__head reveal">
+        <div><p>04 / REFERENCE LIBRARY</p><h2>参考不是风格名，<br>而是具体可执行片段</h2></div>
+        <p>将影视参考拆成可检索的光影、调色、运镜与特效模块，<br>每次调用说明“参考什么、为什么”。</p>
+      </header>
+      <div class="library-grid reveal">
+        <article><span>01 / LIGHT</span><h3>光影库</h3><p>光源方向、面部阴影、环境补光与冷暖对比。</p><b>Blade Runner 2049</b></article>
+        <article><span>02 / COLOR</span><h3>调色库</h3><p>色相基底、饱和度、暗部纯净度与颗粒质感。</p><b>Dune · ETERNA</b></article>
+        <article><span>03 / CAMERA</span><h3>运镜库</h3><p>具体段落的速度、惯性、焦点转移与运动目的。</p><b>Rush · Whiplash</b></article>
+        <article><span>04 / VFX</span><h3>特效库</h3><p>碎冰、烟尘、碰撞与受力反馈的真实物理参照。</p><b>NHL · Physical FX</b></article>
+      </div>
+    </section>
+
+    <section id="quality" class="system-section quality">
+      <div class="quality-copy reveal">
+        <p>05 / QUALITY ASSURANCE</p>
+        <h2>生成之前，<br><span>先过导演质检。</span></h2>
+        <p>系统的价值不只是“写出一条提示词”，而是减少返工、统一标准，让不同项目都能复用同一套导演判断。</p>
+      </div>
+      <div class="quality-list reveal">
+        <label><input type="checkbox" checked disabled><span><b>01</b>叙事节点与时长是否匹配</span></label>
+        <label><input type="checkbox" checked disabled><span><b>02</b>人物、道具与空间是否连续</span></label>
+        <label><input type="checkbox" checked disabled><span><b>03</b>机位是否同轴且符合所选模式</span></label>
+        <label><input type="checkbox" checked disabled><span><b>04</b>动作、惯性与特效是否符合物理</span></label>
+        <label><input type="checkbox" checked disabled><span><b>05</b>素材引用是否只出现在引用区</span></label>
+        <label><input type="checkbox" checked disabled><span><b>06</b>声音、文字与结尾红线是否锁定</span></label>
+        <div><span>SYSTEM STATUS</span><strong><i></i> READY TO GENERATE</strong></div>
+      </div>
+    </section>
+
+    <section class="reuse-loop reveal">
+      <div><span>INPUT</span><b>任何剧本</b></div><i>→</i><div><span>PROCESS</span><b>同一套导演系统</b></div><i>→</i><div><span>OUTPUT</span><b>稳定的镜头指令</b></div>
+      <a href="../process/index.html">查看实战案例 <b>↗</b></a>
+    </section>
+  </main>
+
+  <footer><span>© 2026 AI VISUAL DIRECTOR</span><a href="../index.html">BACK TO HOME ↗</a></footer>
+  <script src="../script.js"></script>
+  <script src="prompt-system.js"></script>
+  <script type="module" src="../ui-assets/nav-ui.js"></script>
+</body>
+</html>

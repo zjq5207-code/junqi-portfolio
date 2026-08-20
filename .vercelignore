@@ -1,0 +1,5 @@
+scene-src/
+.verify-*.cjs
+*-preview.png
+*-mobile.png
+ASSET-PLAN.md
