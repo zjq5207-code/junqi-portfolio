@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
   <meta name="description" content="AI 导演曾俊淇的冰球动作短片完整流程拆解。" />
   <title>流程拆解｜冰球动作短片</title>
-  <link rel="preconnect" href="https://fonts.loli.net">
-  <link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
-  <link href="https://fonts.loli.net/css2?family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../hockey-case.css" />
   <link rel="stylesheet" href="../ui-assets/nav-ui.css" />
@@ -18,30 +19,38 @@
 
   <main id="case-top">
     <section class="process-page-hero">
-      <img loading="lazy" src="../assets/images/hockey-over-shoulder.webp" alt="越过 Ryan 肩背锁定冰球守门员" />
+          <img src="../assets/images/hockey-over-shoulder.webp" alt="越过 Ryan 肩背锁定冰球守门员" />
       <div class="process-page-hero__shade"></div>
       <div class="process-page-hero__copy reveal">
         <p>DIRECTOR CASE STUDY / 01</p>
         <h1>从剧本<br>到<span>破网</span></h1>
         <small>关系轴 · 物理惯性 · 24 秒动作叙事</small>
-        <a href="#case-script">开始拆解 ↓</a>
+        <a href="#case-film">先看成片 ↓</a>
       </div>
-      <div class="process-page-hero__meta"><span>23.48 SEC</span><span>1080 × 1920</span><span>AI ACTION SEQUENCE</span></div>
+      <div class="process-page-hero__meta"><span>41 SEC FULL FILM</span><span>24 SEC BREAKDOWN</span><span>AI ACTION SEQUENCE</span></div>
     </section>
 
     <section class="director-case">
+      <article id="case-film" class="case-lead-film reveal">
+        <header><p>FINAL FILM / WATCH FIRST</p><h2>先看成片，<br><span>再拆镜头。</span></h2><small>完整片段 00:41<br>本页拆解其中 24 秒核心动作段落</small></header>
+        <div class="case-lead-film__screen">
+          <video src="../assets/videos/drama-highlight.mp4" poster="../assets/videos/drama-highlight-poster.jpg" controls playsinline preload="metadata"></video>
+          <div><span>AI DRAMA · ICE HOCKEY</span><b>精彩短剧</b><small>1080 × 1920 · SOUND DESIGN</small></div>
+        </div>
+      </article>
+
       <div class="section-head reveal">
         <div><p class="eyebrow">COMPLETE WORKFLOW</p><h2>流程拆解</h2></div>
         <p>剧本片段 → 分镜设计 → 机位 / 镜头语言<br>→ AI 提示词 → 最终画面</p>
       </div>
 
       <div class="case-opening reveal">
-        <div class="case-opening__visual"><img loading="lazy" src="../assets/images/hockey-ambush.webp" alt="Ryan 面对两名球员夹击" /><span>CASE 01 · ICE HOCKEY</span><b>23.48 SEC / 9:16</b></div>
+            <div class="case-opening__visual"><img src="../assets/images/hockey-ambush.webp" alt="Ryan 面对两名球员夹击" /><span>CASE 01 · ICE HOCKEY</span><b>23.48 SEC / 9:16</b></div>
         <div class="case-opening__copy"><p class="case-kicker">从剧本到最终画面</p><h3>关系轴、物理惯性与<br><em>24 秒动作叙事</em></h3><p>以 Ryan Carter 的一次高速突破与爆射为核心，在竖屏内完成建立、夹击、变向、锁定、蓄力与破网。重点不是“生成冰球画面”，而是控制空间关系、动作因果、镜头节奏和声音落点。</p><ul><li>冷蓝复古电影质感</li><li>全程锁定同侧关系轴</li><li>高速动作遵循物理逻辑</li><li>无字幕 / 无背景音乐</li></ul></div>
       </div>
 
       <nav class="case-route reveal" aria-label="冰球案例制作流程">
-        <a href="#case-script"><b>01</b><span>剧本片段</span></a><a href="#case-storyboard"><b>02</b><span>分镜设计</span></a><a href="#case-camera"><b>03</b><span>机位 / 镜头语言</span></a><a href="#case-prompt"><b>04</b><span>AI 提示词</span></a><a href="#case-final"><b>05</b><span>最终画面</span></a>
+        <a href="#case-script"><b>01</b><span>剧本片段</span></a><a href="#case-storyboard"><b>02</b><span>分镜设计</span></a><a href="#case-camera"><b>03</b><span>机位 / 镜头语言</span></a><a href="#case-prompt"><b>04</b><span>AI 提示词</span></a><a href="#case-film"><b>05</b><span>最终画面</span></a>
       </nav>
 
       <article id="case-script" class="case-step case-script reveal">
@@ -53,12 +62,12 @@
       <article id="case-storyboard" class="case-step reveal">
         <header><span>STEP 02 / STORYBOARD</span><h3>分镜设计</h3><p>六个机位单元构成完整的动作曲线。</p></header>
         <div class="storyboard-grid">
-          <figure><img loading="lazy" src="../assets/images/hockey-shot-01.jpg" alt="冰刀急刹与碎冰特写" /><figcaption><b>01 · 0–8S</b><strong>急刹 / 建立</strong><span>碎冰特写上摇至背影，进入高速跟拍。</span></figcaption></figure>
-          <figure><img loading="lazy" src="../assets/images/hockey-ambush.webp" alt="Ryan 面对两名熔炉队球员左右夹击" /><figcaption><b>02 · 8–12S</b><strong>夹击 / 变向</strong><span>急停甩摇，利用惯性甩开两名防守者。</span></figcaption></figure>
-          <figure><img loading="lazy" src="../assets/images/hockey-over-shoulder.webp" alt="越过 Ryan 肩背锁定守门员和球门" /><figcaption><b>03 · 12–15S</b><strong>过肩 / 锁定</strong><span>焦点由肩背推向球门与守门员。</span></figcaption></figure>
-          <figure><img loading="lazy" src="../assets/images/hockey-shot-04.jpg" alt="Ryan 正面凝视准备射门" /><figcaption><b>04 · 15–17.5S</b><strong>凝视 / 蓄势</strong><span>缓推面部特写，以呼吸建立爆发前静默。</span></figcaption></figure>
-          <figure><img loading="lazy" src="../assets/images/hockey-shot-05.jpg" alt="Ryan 抬杆准备爆射" /><figcaption><b>05 · 17.5–20S</b><strong>抬杆 / 拧身</strong><span>低机位微仰，背景纵深轻微塌陷。</span></figcaption></figure>
-          <figure><img loading="lazy" src="../assets/images/hockey-shot-06.jpg" alt="冰球突破守门员砸入球网" /><figcaption><b>06 · 20–24S</b><strong>爆射 / 破网</strong><span>跟球、扑救侧摇、破网骤定连续完成。</span></figcaption></figure>
+          <figure><img src="../assets/images/hockey-shot-01.jpg" alt="冰刀急刹与碎冰特写" /><figcaption><b>01 · 0–8S</b><strong>急刹 / 建立</strong><span>碎冰特写上摇至背影，进入高速跟拍。</span></figcaption></figure>
+            <figure><img src="../assets/images/hockey-ambush.webp" alt="Ryan 面对两名熔炉队球员左右夹击" /><figcaption><b>02 · 8–12S</b><strong>夹击 / 变向</strong><span>急停甩摇，利用惯性甩开两名防守者。</span></figcaption></figure>
+            <figure><img src="../assets/images/hockey-over-shoulder.webp" alt="越过 Ryan 肩背锁定守门员和球门" /><figcaption><b>03 · 12–15S</b><strong>过肩 / 锁定</strong><span>焦点由肩背推向球门与守门员。</span></figcaption></figure>
+          <figure><img src="../assets/images/hockey-shot-04.jpg" alt="Ryan 正面凝视准备射门" /><figcaption><b>04 · 15–17.5S</b><strong>凝视 / 蓄势</strong><span>缓推面部特写，以呼吸建立爆发前静默。</span></figcaption></figure>
+          <figure><img src="../assets/images/hockey-shot-05.jpg" alt="Ryan 抬杆准备爆射" /><figcaption><b>05 · 17.5–20S</b><strong>抬杆 / 拧身</strong><span>低机位微仰，背景纵深轻微塌陷。</span></figcaption></figure>
+          <figure><img src="../assets/images/hockey-shot-06.jpg" alt="冰球突破守门员砸入球网" /><figcaption><b>06 · 20–24S</b><strong>爆射 / 破网</strong><span>跟球、扑救侧摇、破网骤定连续完成。</span></figcaption></figure>
         </div>
       </article>
 
@@ -82,10 +91,6 @@
         <details class="full-prompt"><summary><span>展开生产级提示词</span><b>VIEW FULL PROMPT ＋</b></summary><div class="full-prompt__body"><section><h4>最高优先级</h4><p>无背景音乐，仅音效、环境声与解说配音；画面绝不出现文字、字幕、气泡或标注。冷调复古电影质感、冰场冷蓝基底。结尾停在冰球砸进球网的最后一帧直接结束。物体运动符合物理逻辑，关系轴锁同一侧，绝不越轴。</p></section><section><h4>场景与光影</h4><p>室内职业冰球馆以环形看台、顶部桁架灯阵与中央记分屏建立空间。顶部冷白泛光灯均匀打下，冰面产生大片冷蓝高光并自下补亮球员下颌和冰刀。看台暗部人海攒动，整体高对比、低饱和、颗粒锐利，无暖光介入。</p></section><section><h4>人物与空间</h4><p>Ryan 压低身形单手控球前冲；两名熔炉队球员自左右夹击，被急停变向甩开后因惯性滑出；守门员随射门方向横向扑救却擦空。进攻方向始终指向球门，机位全程处于冲刺关系轴同侧。</p></section><section><h4>质感与负向约束</h4><p>冰球服面料哑光、护具与头盔反冷光、冰刀金属刃高光、球杆呈碳纤维质感、冰面湿滑反射真实。排除塑料感冰面、塑料护具、贴图式碎冰、玩具冰球与 AI 糊边。</p></section><section><h4>镜头执行</h4><p>0–8s：冰刀急刹特写升格，上摇环绕至运动中的 Ryan 背影，35mm 贴背跟拍并绕至侧前。8–12s：50mm 跟随急停横削和变向过人。12–15s：过肩快速推焦至守门员。15–17.5s：85mm 正面缓推凝视。17.5–20s：低机位跟随抬杆，轻微推轨变焦。20–24s：85mm 跟球推进、随扑救侧摇、破网骤定。</p></section><section><h4>声音执行</h4><p>冰刀急刹“嚓——”、碎冰飞溅、运球哒哒、护具摩擦、击球爆裂声、冰球破风、球网与门框震响、观众声浪。画外解说：“Carter splits the defense—oh, what a move!”</p></section></div></details>
       </article>
 
-      <article id="case-final" class="case-step case-final reveal">
-        <header><span>STEP 05 / FINAL FRAME</span><h3>最终画面</h3><p>提示词中的空间、动作、镜头与声音在这里汇合。</p></header>
-        <div class="final-screen"><video src="../assets/videos/hockey-director-breakdown.mp4" poster="../assets/images/hockey-shot-06.jpg" controls playsinline preload="metadata"></video><div class="final-screen__meta"><span>AI ACTION SEQUENCE</span><b>HOCKEY / PART 01</b><small>23.48 SEC · 1080 × 1920 · SOUND DESIGN</small></div></div>
-      </article>
     </section>
   </main>
 

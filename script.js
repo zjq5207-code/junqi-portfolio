@@ -30,3 +30,8 @@ if(video&&play){
     video.play(); play.textContent='Ⅱ';
   }));
 }
+
+const selectedMotionVideos=[...document.querySelectorAll('.home-motion video')];
+selectedMotionVideos.forEach(current=>current.addEventListener('play',()=>{
+  selectedMotionVideos.forEach(other=>other!==current&&other.pause());
+}));

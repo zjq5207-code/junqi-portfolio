@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <meta name="description" content="曾俊淇 AI 导演个人作品集：视觉开发、导演流程与提示词工程。" />
+  <meta name="description" content="曾俊淇 AI 导演个人作品集：影像片段、视觉开发、导演流程与提示词工作。" />
   <title>曾俊淇｜AI 导演作品集</title>
-  <link rel="preconnect" href="https://fonts.loli.net">
-  <link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
-  <link href="https://fonts.loli.net/css2?family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="home-portals.css" />
   <link rel="stylesheet" href="prompt.css" />
@@ -20,7 +20,7 @@
 
   <main id="top">
     <section class="hero">
-      <video class="hero-bg" src="assets/videos/epic-war.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <video class="hero-bg" src="assets/videos/epic-war.mp4" autoplay muted loop playsinline preload="auto"></video>
       <div class="hero-shade"></div>
       <div class="scanline"></div>
       <div class="hero-signal"><i></i> VISUAL SIGNAL / LIVE</div>
@@ -28,39 +28,59 @@
         <p class="eyebrow">AI VISUAL DIRECTOR · STORY ENGINE · 2026</p>
         <h1><span>BEYOND</span><br><em>IMAGINATION</em></h1>
         <p class="hero-cn">让想象，成为镜头。</p>
-        <p class="intro">视觉开发 / 导演流程 / 提示词工程<br>从世界设定到最终成片。</p>
-        <a class="circle-link" href="#visual-development"><span>浏览作品</span><b>↓</b></a>
+        <p class="intro">视觉开发 / 导演流程 / 提示词工作<br>从世界设定到最终成片。</p>
+        <a class="circle-link" href="#selected-motion"><span>浏览作品</span><b>↓</b></a>
       </div>
       <div class="hero-index">GEN FILM · INTERACTIVE · VFX</div>
       <div class="marquee"><div>AI CINEMA — WORLD BUILDING — INTERACTIVE STORY — AI CINEMA — WORLD BUILDING — INTERACTIVE STORY —</div></div>
     </section>
 
+    <section id="selected-motion" class="home-module home-motion">
+      <div class="module-heading reveal">
+        <div><p class="eyebrow">01 / SELECTED MOTION</p><h2>影像片段</h2></div>
+        <p>短剧、互动叙事与高燃剪辑，<br>让世界设定真正进入时间。</p>
+      </div>
+      <div class="home-motion__grid reveal">
+        <article class="home-motion__item home-motion__item--portrait">
+          <video src="assets/videos/drama-highlight.mp4" poster="assets/videos/drama-highlight-poster.jpg" controls playsinline preload="none"></video>
+          <div><b>01</b><h3>精彩短剧</h3><span>AI DRAMA · 00:41</span></div>
+        </article>
+        <article class="home-motion__item home-motion__item--portrait">
+          <video src="assets/videos/interactive-film.mp4" poster="assets/videos/interactive-film-poster.jpg" controls playsinline preload="none"></video>
+          <div><b>02</b><h3>互动影游</h3><span>INTERACTIVE FILM · 01:53</span></div>
+        </article>
+        <article class="home-motion__item home-motion__item--landscape">
+          <video src="assets/videos/hype-reel.mp4" poster="assets/videos/hype-reel-poster.jpg" controls playsinline preload="none"></video>
+          <div><b>03</b><h3>高燃混剪</h3><span>ACTION REEL · 03:34</span></div>
+        </article>
+      </div>
+      <a class="home-motion__more reveal" href="visual/index.html#motion">进入完整影像片段 <i>↗</i></a>
+    </section>
+
     <section id="visual-development" class="home-module visual-portal">
       <div class="module-heading reveal">
-        <div><p class="eyebrow">01 / VISUAL DEVELOPMENT</p><h2>视觉开发</h2></div>
+        <div><p class="eyebrow">02 / VISUAL DEVELOPMENT</p><h2>视觉开发</h2></div>
         <p>角色、场景与动态影像，<br>共同建立一个可信的世界。</p>
       </div>
-      <a class="visual-portal__link reveal" href="visual/index.html" aria-label="进入视觉开发二级页面">
-        <div class="visual-triptych">
-          <figure><img loading="lazy" src="assets/images/empress-king.webp" alt="东方角色视觉开发" /><span>CHARACTER</span></figure>
-          <figure><img loading="lazy" src="scenes/scenes/09.webp" alt="场景宇宙视觉开发" /><span>SCENE</span></figure>
-          <figure><img loading="lazy" src="assets/images/eternal-wolf.webp" alt="暗黑幻想角色视觉" /><span>MOTION</span></figure>
-        </div>
-        <div class="portal-copy">
+      <div class="visual-portal__link reveal">
+        <div id="home-drift-wall" class="home-drift-wall" aria-label="漂移场景图片墙"></div>
+        <div class="visual-portal__shade"></div>
+        <a class="portal-copy" href="visual/index.html" aria-label="进入视觉开发二级页面">
           <span>角色展示 · 场景宇宙 · 影像片段</span>
           <h3>进入视觉世界</h3>
           <i>↗</i>
-        </div>
-      </a>
+        </a>
+        <small class="visual-portal__hint">MOVE · HOVER · EXPLORE</small>
+      </div>
     </section>
 
     <section id="process" class="home-module process-portal">
       <div class="module-heading reveal">
-        <div><p class="eyebrow">02 / DIRECTOR WORKFLOW</p><h2>流程拆解</h2></div>
+        <div><p class="eyebrow">03 / DIRECTOR WORKFLOW</p><h2>流程拆解</h2></div>
         <p>展示如何思考镜头，<br>而不只是生成画面。</p>
       </div>
       <a class="process-portal__link reveal" href="process/index.html" aria-label="进入冰球案例流程拆解二级页面">
-        <div class="process-portal__image"><img loading="lazy" src="assets/images/hockey-ambush.webp" alt="Ryan 遭遇两名冰球运动员夹击" /><span>CASE 01 / ICE HOCKEY</span></div>
+          <div class="process-portal__image"><img src="assets/images/hockey-ambush.webp" alt="Ryan 遭遇两名冰球运动员夹击" /><span>CASE 01 / ICE HOCKEY</span></div>
         <div class="process-portal__copy">
           <p>从剧本到最终画面</p>
           <h3>关系轴、物理惯性与<br><em>24 秒动作叙事</em></h3>
@@ -77,8 +97,8 @@
     </section>
 
     <section id="prompt-engineering" class="prompt-engineering">
-      <div class="section-head reveal"><div><p class="eyebrow">03 / PROMPT ENGINEERING</p><h2>提示词工程</h2></div><p>让创意变成可复用、可扩展、<br>可稳定交付的生产系统。</p></div>
-      <a class="prompt-system-entry reveal" href="prompt/index.html" aria-label="进入提示词工程可复用系统二级页面">
+      <div class="section-head reveal"><div><p class="eyebrow">04 / PROMPT WORK</p><h2>提示词工作</h2></div><p>让创意变成可复用、可扩展、<br>可稳定交付的生产系统。</p></div>
+      <a class="prompt-system-entry reveal" href="prompt/index.html" aria-label="进入提示词工作可复用系统二级页面">
         <div class="prompt-grid">
           <article><b>01</b><span>SCRIPT SPLITTER</span><h3>剧本拆分 Skill</h3><p>用时长、叙事节点与空间连续性，把长剧本编译成可执行镜头。</p></article>
           <article><b>02</b><span>JIMENG PROTOCOL</span><h3>即梦提示词规则</h3><p>统一场景、光影、站位、材质、引用和负向约束的输出协议。</p></article>
@@ -92,7 +112,7 @@
       <p class="eyebrow">ABOUT / CONTACT</p>
       <h2>下一段故事，<br><em>从这里开始。</em></h2>
       <p>AI 短剧 · 互动影游 · 商业影像 · 视觉开发</p>
-      <a href="mailto:2256290836@qq.com">2256290836@QQ.COM ↗</a>
+          <span>AVAILABLE FOR AI FILM PROJECTS</span>
     </section>
   </main>
   <footer><span>© 2026 AI VISUAL DIRECTOR</span><a href="#top">BACK TO TOP ↑</a></footer>

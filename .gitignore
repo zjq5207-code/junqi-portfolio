@@ -1,1 +1,12 @@
-.vercel
+scene-src/node_modules/
+.vercel/
+.video-tools/
+.video-tools-py/
+.github-cli/
+gh_*_windows_amd64.zip
+.verify-*.cjs
+*-preview.png
+*-mobile.png
+*-contact.jpg
+ASSET-PLAN.md
+
